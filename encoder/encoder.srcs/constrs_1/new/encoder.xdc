@@ -1,0 +1,7 @@
+set_property PACKAGE_PIN W17 [get_ports EN]
+set_property PACKAGE_PIN W16 [get_ports {D[2]}]
+set_property PACKAGE_PIN V16 [get_ports {D[1]}]
+set_property PACKAGE_PIN V17 [get_ports {D[0]}]
+set_property PACKAGE_PIN E19 [get_ports {B[1]}]
+set_property PACKAGE_PIN U16 [get_ports {B[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {EN D[*] B[*]}]
