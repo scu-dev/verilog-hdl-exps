@@ -1,0 +1,15 @@
+set_property PACKAGE_PIN W5 [get_ports clk]
+set_property PACKAGE_PIN V17 [get_ports rst_n]
+set_property PACKAGE_PIN U16 [get_ports {B[0]}]
+set_property PACKAGE_PIN E19 [get_ports {B[1]}]
+set_property PACKAGE_PIN U19 [get_ports {B[2]}]
+set_property PACKAGE_PIN V19 [get_ports {B[3]}]
+set_property PACKAGE_PIN W18 [get_ports {B[4]}]
+set_property PACKAGE_PIN U15 [get_ports {B[5]}]
+set_property PACKAGE_PIN U14 [get_ports {B[6]}]
+set_property PACKAGE_PIN V14 [get_ports {B[7]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {clk rst_n B[*]}]
+
+create_clock -name clk_100mhz -period 10.000 [get_ports clk]
+# Default DIVISOR: 1,000,000,000 ns period, 10 ns high pulse.
+create_generated_clock -name clk_1hz -source [get_ports clk] -edges {1 3 201} [get_pins clk_1hz_reg/Q]
