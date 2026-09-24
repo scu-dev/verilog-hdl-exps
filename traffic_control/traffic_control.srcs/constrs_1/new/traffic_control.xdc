@@ -1,0 +1,10 @@
+# Local Basys3 mapping; no package pins are specified by lecture 7.9.
+set_property PACKAGE_PIN W5 [get_ports clock]
+set_property PACKAGE_PIN V17 [get_ports clear]
+set_property PACKAGE_PIN V16 [get_ports X]
+set_property PACKAGE_PIN U16 [get_ports {hwy[0]}]
+set_property PACKAGE_PIN E19 [get_ports {hwy[1]}]
+set_property PACKAGE_PIN U19 [get_ports {cntry[0]}]
+set_property PACKAGE_PIN V19 [get_ports {cntry[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {clock clear X hwy[*] cntry[*]}]
+create_clock -name clock_100mhz -period 10.000 [get_ports clock]
