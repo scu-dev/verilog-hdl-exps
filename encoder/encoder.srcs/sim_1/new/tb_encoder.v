@@ -4,10 +4,8 @@ module tb_encoder;
     reg EN;
     reg [2:0] D;
     wire [1:0] procedural_B;
-    wire [1:0] behavioral_B;
 
     encoder dut(EN, D, procedural_B);
-    encoder_behavioral expression_dut(EN, D, behavioral_B);
 
     initial begin
         {EN, D} = 4'b0000;
